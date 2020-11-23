@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Hello world</title>
+   </head>
+   <body>
+   <div class="d1" id="gmtTime">THIS IS THE CHATTING APPLICATION<br>GMT Time : <b>Sat, 01 Jan 1970 00:00:00 GMT</b></div>
+   <div class="message_container">                 
+   </div>
+   <div class="send-bar">
+   <div>  
+   <input id="mess" type="text" style="width:85%;border:2px solid black;height:34px">
+   <input type="button" onclick="sendMessage()" value="Send" style="border:2px solid black;height:34px">
+   </div>
+   <div id="online"></div>
+   </div>
+   </body>
+   <script src = "http://52.188.151.74:7500/socket.io/socket.io.js"></script>
+   <script>
+      var socket = io('http://52.188.151.74:7500',{reconnection: false});
+      
+      (function timeFn(){
+      setTimeout(function(){ document.getElementById("gmtTime").innerHTML=`THIS IS THE CHATTING APPLICATION<br>GMT Time : <b>${(new Date()).toUTCString()}</b>`;timeFn();}, 1000);
+      })();
+      
+      const messageContainer=document.querySelector(".message_container");
+
+      name=prompt("Enter USER NAME : ");
+                 
+      socket.emit('new-user-joined' ,name);
+      socket.on('online-',val=>
+      {
+      document.getElementById("online").innerHTML=`Online ${val}`;
+      });
+      socket.on('user-joined',data=>
+      {
+       const joinElement=document.createElement('div');
+       data=data.bold();
+       joinElement.innerHTML=`${data} joined the room server`;
+       joinElement.classList.add('center_');
+       messageContainer.append(joinElement);
+      });
+      socket.on('left',data=>
+      {
+       const joinElement=document.createElement('div');
+       data=data.bold();
+       joinElement.innerHTML=`${data} left the room server`;
+       joinElement.classList.add('center_');
+       messageContainer.append(joinElement);
+      });  
+      
+      socket.on('receive',(data)=>
+      {
+       var tableR=document.createElement('table');
+       var trR=document.createElement('tr');
+       var tdR=document.createElement('td');
+       var td2R=document.createElement('td');  
+       
+       var trR1=document.createElement('tr');
+       var tdR1=document.createElement('td');
+       var td2R1=document.createElement('td');
+       
+       const imageDiv=document.createElement('div');
+       imageDiv.classList.add('left');
+       tableR.append(trR);
+       trR.appendChild(tdR);
+       trR.appendChild(td2R);
+       
+       tableR.append(trR1);
+       trR1.appendChild(td2R1);
+       trR1.appendChild(tdR1);  
+       
+       const timeDiv2=document.createElement('div');
+       timeDiv2.innerHTML=`[<b>${(new Date()).toUTCString()}</b>]`;
+       timeDiv2.setAttribute("style", "float:right");
+       tdR1.appendChild(timeDiv2);
+      
+       const nameDiv2=document.createElement('div');
+       nameDiv2.innerHTML=`<b>${data.name}</b>`;
+       nameDiv2.setAttribute("style", "text-align:center");
+       td2R1.appendChild(nameDiv2);
+       
+       
+       var elem = document.createElement("img");
+       elem.setAttribute("src", "/user.png");
+       elem.setAttribute("style", "max-width: 40px;margin: 20px;border-radius: 50%;float:left");
+       elem.setAttribute("alt", "Avatar");
+       tdR.append(elem);
+       imageDiv.append(tableR);
+       const joinElement=document.createElement('div');   
+       joinElement.innerHTML=`${data.message}`;
+       td2R.appendChild(joinElement);
+       messageContainer.append(imageDiv);
+      });  
+      
+      function sendMessage()
+      {
+      var tableS=document.createElement('table');
+      var trS=document.createElement('tr');
+      var tdS=document.createElement('td');
+      var td2S=document.createElement('td');
+      
+      var trS1=document.createElement('tr');
+      var tdS1=document.createElement('td');
+      var td2S1=document.createElement('td');
+      
+      const message=document.getElementById("mess");
+      const imageDiv=document.createElement('div');
+      imageDiv.classList.add('right');
+      tableS.append(trS);
+      trS.appendChild(tdS);
+      trS.appendChild(td2S);      
+      
+      tableS.append(trS1);
+      trS1.appendChild(tdS1);
+      trS1.appendChild(td2S1);   
+      
+      const timeDiv=document.createElement('div');
+      timeDiv.innerHTML=`[<b>${(new Date()).toUTCString()}</b>]`;
+      timeDiv.setAttribute("style", "float:left");
+      tdS1.appendChild(timeDiv);
+      
+      const nameDiv=document.createElement('div');
+      nameDiv.innerHTML=`<b>${name}</b>`;
+      nameDiv.setAttribute("style", "text-align:center");
+      td2S1.appendChild(nameDiv);
+      
+      var elem = document.createElement("img");
+      elem.setAttribute("src", "/user.png");
+      elem.setAttribute("style", "max-width: 40px;margin: 20px;border-radius: 50%;float:right;");
+      elem.setAttribute("alt", "Avatar");
+      td2S.append(elem);
+      imageDiv.append(tableS);
+      const joinElement=document.createElement('p');
+      joinElement.innerText=`${message.value}`;
+      tdS.appendChild(joinElement);
+      messageContainer.append(imageDiv);
+      socket.emit('send' ,message.value);
+      message.value = "";
+      }
+      
+      (function d(){
+      setTimeout(function(){ 
+      if(socket.connected == false)
+      {
+         alert("You Got Disconnected From Room Server.\nPlease Connect To Internet And Refresh Page");
+      }
+      d();
+      }, 1000);
+      })();
+      
+   </script>
+   <link rel="stylesheet" type="text/css" href="chat.css">
+</html>
