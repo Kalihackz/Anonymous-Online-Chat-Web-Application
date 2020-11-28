@@ -1,0 +1,83 @@
+*
+{
+margin:0px;
+}
+
+body
+{
+background-color:rgb(0 0 0 / 83%);
+}
+
+.d1
+{
+    background-color: #56ff1a87;
+    color:#f2ff00;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    border: 3px solid #37ff37;
+    padding: 10px;
+}
+
+.message_container
+{
+    background-color: #043500;
+    text-align: center;
+    margin: auto;
+    width: 55%;
+    border: 10px solid #dd0707;
+    padding: 50px;
+    overflow-y : auto;
+    max-width:955px;
+    height:60vh;
+}
+
+.send-bar
+{
+    background-color: #000000b5;
+    text-align: center;
+    margin: auto;
+    width: 55%;
+    border: 10px solid green;
+    padding: 10px 50px 10px 50px;
+}
+
+
+.center_
+{
+    text-align: center;
+    clear: both;
+    padding: 10px;
+    background-color: #15ff0073;
+    color:#e6ff00;
+    width: 50%;
+    margin: 10px auto 2px auto;
+    border-radius:20px;
+    border: 2px solid cyan;
+}
+
+.left
+{
+clear: both;
+background-color: #00c59e;
+float: left;
+padding: 10px;
+margin:10px auto 10px 0;
+text-align: left;
+max-width: 100vh;
+border-radius:20px;
+border: 2px solid red;
+}
+
+.right
+{
+clear: both;
+background-color: #7368a4;
+float: right;
+padding: 10px;
+margin:10px 0 10px auto;
+text-align: left;
+max-width: 100vh;
+border-radius:20px;
+border: 2px solid yellow;
+}
