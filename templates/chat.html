@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Anonymous Chatz</title>
+      <title>AnonChatz</title>
+      <link rel="icon" href="/logo.png" type="image/icon type">
    </head>
    <body>
-   <div class="d1" id="gmtTime">THIS IS THE CHATTING APPLICATION<br>GMT Time : <b>Sat, 01 Jan 1970 00:00:00 GMT</b></div>
+
+   <div class="d1" id="gmtTime">AnonChatz<br>GMT Time : <b>Sat, 01 Jan 1970 00:00:00 GMT</b></div>
    <div class="message_container">                 
    </div>
    <div class="send-bar">
    <div>  
    <input id="mess" type="text" style="width:85%;border:2px solid black;height:34px">
-   <input type="button" onclick="sendMessage()" value="Send" style="border:2px solid black;height:34px">
+   <input type="button" onclick="sendMessage()" value="Send" style="border:2px solid black;height:34px;cursor: pointer;">
    </div>
-   <div id="online"></div>
+   <div style="color:#e6ff00" id="online"></div>
    </div>
+   
+  <!-- <iframe id="myAudio" width="0" height="0" src="/notify.mp3" frameborder="0" allow="autoplay;" allowfullscreen></iframe>-->
+   
+   
+   <audio autoplay id="myAudio">
+   <source src="/notify.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
    </body>
    <script src = "http://52.188.151.74:7500/socket.io/socket.io.js"></script>
    <script>
       var socket = io('http://52.188.151.74:7500',{reconnection: false});
+       var isTabActive,val;
       
       (function timeFn(){
-      setTimeout(function(){ document.getElementById("gmtTime").innerHTML=`THIS IS THE CHATTING APPLICATION<br>GMT Time : <b>${(new Date()).toUTCString()}</b>`;timeFn();}, 1000);
+      setTimeout(function(){ document.getElementById("gmtTime").innerHTML=`<img src="/logo2.png" height="110px" width="180px"><br>GMT Time : <b>${(new Date()).toUTCString()}</b>`;timeFn();}, 1000);
       })();
       
       const messageContainer=document.querySelector(".message_container");
@@ -91,6 +102,22 @@
        joinElement.innerHTML=`${data.message}`;
        td2R.appendChild(joinElement);
        messageContainer.append(imageDiv);
+       
+      
+
+      onfocus = function () { 
+      isTabActive = true; 
+      }; 
+
+      onblur = function () { 
+      isTabActive = false; 
+      }; 
+
+     val=isTabActive ? 'active' : 'inactive'
+	if (val=='inactive'){
+	document.getElementById("myAudio").play();
+	}	
+       console.log(val);
       });  
       
       function sendMessage()
@@ -127,7 +154,7 @@
       
       var elem = document.createElement("img");
       elem.setAttribute("src", "/user.png");
-      elem.setAttribute("style", "max-width: 40px;margin: 20px;border-radius: 50%;float:right;");
+      elem.setAttribute("style", "max-width: 40px;margin: 20px;border-radius: 50%;float:right");
       elem.setAttribute("alt", "Avatar");
       td2S.append(elem);
       imageDiv.append(tableS);
@@ -146,9 +173,9 @@
          alert("You Got Disconnected From Room Server.\nPlease Connect To Internet And Refresh Page");
       }
       d();
-      }, 1000);
+      }, 8000);
       })();
       
    </script>
-   <link rel="stylesheet" type="text/css" href="chat.css">
+   <link rel="stylesheet" type="text/css" href="dark_chat.css">
 </html>
