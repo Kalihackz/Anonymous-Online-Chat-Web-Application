@@ -17,8 +17,8 @@ const server = http.createServer((req, res) =>
    const logo2=fs.readFileSync('./static/serverImages/logo2.png');
    const chat_css=fs.readFileSync('./static/css/chat.css');
    const d_chat_css=fs.readFileSync('./static/css/dark_chat.css');
-   const notify=fs.readFileSync('./static/audio/notify.mp3');
-   const song=fs.readFileSync('./static/audio/song.mp3');
+   const notify=fs.readFileSync('./audio/notify.mp3');
+   const song=fs.readFileSync('./audio/song.mp3');
    
    var ip = (req.headers['x-forwarded-for'] || '').split(',').pop().trim() ||  req.connection.remoteAddress ||   req.socket.remoteAddress || 
          req.connection.socket.remoteAddress
