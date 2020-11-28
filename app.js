@@ -12,8 +12,6 @@ const info = "Architecture : "+os.arch()+"<br>Hostname : "+os.hostname()+"<br>Pl
 const server = http.createServer((req, res) => 
 {    
    const chat=fs.readFileSync('./templates/chat.html');
-   const home=fs.readFileSync('./templates/homepage.html');
-   const home_css=fs.readFileSync('./static/css/home.css');
    const pic=fs.readFileSync('./static/serverImages/user.png');
    const logo=fs.readFileSync('./static/serverImages/logo.png');
    const logo2=fs.readFileSync('./static/serverImages/logo2.png');
@@ -55,7 +53,7 @@ const server = http.createServer((req, res) =>
     res.statusMessage="OK"
     res.setHeader('Server', 'KaliServer');
     res.setHeader('Content-Type', 'text/html');
-    res.end(home);
+    res.end("<h1>HOME PAGE OF CHAT API</h1>");
    }
    else if(req.url == '/home.css')
    {
