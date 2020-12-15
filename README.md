@@ -25,7 +25,7 @@ in Server so all users must connect to the room server all at a time to discuss 
 Front-End | Back-End
 ----------|---------  
 `Google Fonts` | `Node JS 14.15.1`
-`Javascript` |  
+`Javascript` | `Socket.io 2.3.0`
 `Socket.io 2.3.0` |  
 `HTML5` |  
 `CSS3` | 
