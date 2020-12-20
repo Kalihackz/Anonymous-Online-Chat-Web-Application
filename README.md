@@ -8,9 +8,9 @@ in Server so all users must connect to the room server all at a time to discuss 
 
 ## DOMAIN & IP INFO :
 
-### `Link : http://www.kalihackz.tech/chat/`
+### `Link : http://www.kalihackz.tech/kalihackz/chat/`
 
-`CLICK HERE :` *http://www.kalihackz.tech/chat/* 
+`CLICK HERE :` *http://www.kalihackz.tech/kalihackz/chat/* 
 
 ### ` IP : 40.88.137.55` 
 
