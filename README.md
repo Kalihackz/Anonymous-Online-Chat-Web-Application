@@ -20,7 +20,7 @@ in Server so all users must connect to the room server all at a time to discuss 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-## TECHNOLOGIES USED :
+<img src="https://via.placeholder.com/1270x120/0d1117/BFFF00?text=TECHNOLOGIES+USED" />
 
 Front-End | Back-End
 ----------|---------  
@@ -32,12 +32,12 @@ Front-End | Back-End
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-## FUNCTIONALITIES :
+<img src="https://via.placeholder.com/1270x120/0d1117/BFFF00?text=FUNCTIONALITIES" />
 
 * Web based anonymous chat application that delivers messages in real time.It does not save messages in Server so all users must connect to the room server all at a time to discuss anything.*
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-## SCREENSHOT OF THE WEBPAGE :
+<img src="https://via.placeholder.com/1270x120/0d1117/BFFF00?text=SCREENSHOT+OF+THE+WEBPAGE" />
 
 ![Screenshot Of AnonChatz Date: Tue Dec 15 08:35:36 PM](https://i.imgur.com/kWtOWOY.png)
