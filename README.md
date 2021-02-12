@@ -1,4 +1,4 @@
-# Anonymous-Online-Chat-Web-Application
+<img src="https://via.placeholder.com/1270x120/0d1117/fffff?text=Anonymous+Online+Chat+Web+Application" />
 
 ```html
 A simple Web based anonymous chat application that delivers messages in real time.It does not save messages 
@@ -6,7 +6,7 @@ in Server so all users must connect to the room server all at a time to discuss 
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-## DOMAIN & IP INFO :
+<img src="https://via.placeholder.com/1270x120/0d1117/BFFF00?text=DOMAIN+&+IP+INFO" /
 
 ### `Link : http://www.kalihackz.tech/kalihackz/chat/`
 
