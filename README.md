@@ -20,12 +20,12 @@ in Server so all users must connect to the room server all at a time to discuss 
 <img src="https://via.placeholder.com/1270x120/0d1117/BFFF00?text=TECHNOLOGIES+USED" />
 
 Front-End | Back-End
-----------|---------  
-`Google Fonts` | `Node JS 14.15.1`
-`Javascript` | `Socket.io 2.3.0`
-`Socket.io 2.3.0` |  
-`HTML5` |  
-`CSS3` | 
+----------|---------
+`Google Fonts` <img src="https://www.gstatic.com/images/branding/product/1x/google_fonts_blue_ios_64dp.png" width="30px"/> | `Node JS 14.15.1` <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="30px"/> 
+`Javascript` <img src="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png" width="30px"/> | `Socket.io 2.3.0` <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg" width="30px"/>
+`Socket.io 2.3.0` <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg" width="30px"/> |  
+`HTML5` <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" width="30px"/> |  
+`CSS3` <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" width="30px"/> | 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
