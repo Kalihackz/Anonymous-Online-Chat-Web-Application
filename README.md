@@ -8,15 +8,12 @@ in Server so all users must connect to the room server all at a time to discuss 
 
 <img src="https://via.placeholder.com/1270x120/0d1117/BFFF00?text=DOMAIN+AND+IP+INFO" />
 
-### `Link : http://www.kalihackz.tech/kalihackz/chat/`
+<img alt="link:http://www.kalihackz.tech/kalihackz/chat/" src="https://img.shields.io/static/v1?label=Link:&message=http://www.kalihackz.tech/kalihackz/chat/&color=blue&labelColor=blueviolet&style=for-the-badge" />
+<img alt="IP:40.88.137.55" src="https://img.shields.io/static/v1?label=IP:&message=40.88.137.55&color=blue&labelColor=blueviolet" />
+<img alt="WebsitePORT:7000" src="https://img.shields.io/static/v1?label=Website%20PORT:&message=7000%20[Actually%20port%2080%20is%20portforwarded%20to%20port%207000]&color=blue&labelColor=blueviolet" />
+<img alt="ChatserverPORT:7500" src="https://img.shields.io/static/v1?label=ChatServer%20PORT:&message=7500%20&color=blue&labelColor=blueviolet" />
 
 `CLICK HERE :` *http://www.kalihackz.tech/kalihackz/chat/* 
-
-### ` IP : 40.88.137.55` 
-
-#### ` WEBSITE IS RUNNING  ON PORT : 7000 ` => `[Actually port 80 is portforwarded to port 7000]` 
-
-#### ` CHATSERVER IS RUNNING  ON PORT : 7500 `  
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -34,7 +31,7 @@ Front-End | Back-End
 
 <img src="https://via.placeholder.com/1270x120/0d1117/BFFF00?text=FUNCTIONALITIES" />
 
-* Web based anonymous chat application that delivers messages in real time.It does not save messages in Server so all users must connect to the room server all at a time to discuss anything.*
+* Web based anonymous chat application that delivers messages in real time.It does not save messages in Server so all users must connect to the room server all at a time to discuss anything.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
