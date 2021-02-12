@@ -21,7 +21,7 @@ in Server so all users must connect to the room server all at a time to discuss 
 
 Front-End | Back-End
 ----------|---------
-`Google Fonts` <img src="https://www.gstatic.com/images/branding/product/1x/google_fonts_blue_ios_64dp.png" width="30px"/> | `Node JS 14.15.1` <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="30px"/> 
+`Google Fonts` <img src="https://www.gstatic.com/images/branding/product/1x/google_fonts_blue_ios_64dp.png" width="30px"/> | `Node JS 14.15.1` <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="50px"/> 
 `Javascript` <img src="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png" width="30px"/> | `Socket.io 2.3.0` <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg" width="30px"/>
 `Socket.io 2.3.0` <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg" width="30px"/> |  
 `HTML5` <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" width="30px"/> |  
