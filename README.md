@@ -6,7 +6,7 @@ in Server so all users must connect to the room server all at a time to discuss 
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-<img src="https://via.placeholder.com/1270x120/0d1117/BFFF00?text=DOMAIN+&+IP+INFO" />
+<img src="https://via.placeholder.com/1270x120/0d1117/BFFF00?text=DOMAIN+AND+IP+INFO" />
 
 ### `Link : http://www.kalihackz.tech/kalihackz/chat/`
 
